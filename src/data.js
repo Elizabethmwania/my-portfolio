@@ -1,35 +1,41 @@
+import proj1 from './images/project1.png';
+import proj2 from './images/project2.png';
+import proj3 from './images/project3.png';
+import proj4 from './images/project4.png';
+import img1 from './images/testimonial1.png';
+import img2 from './images/testimonial2.png';
 export const projects = [
     {
       title: "React Reserve",
       subtitle: "MERN Stack",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "../src/images/project1.png",
-      link: "https://reactbootcamp.com",
+      image: proj1,
+      link: "https://herhustle.co.ke/",
     },
     {
       title: "React Tracks",
       subtitle: "React and Python",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./project-2.gif",
-      link: "https://reedbarger.com",
+      image: proj2,
+      link: "https://mobifarm-app-frontend.vercel.app/",
     },
     {
       title: "DevChat",
       subtitle: "React and Firebase",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./project-3.gif",
-      link: "https://jsbootcamp.com",
+      image: proj3,
+      link: "https://mobifarm-app-frontend.vercel.app/offtaker-dashboard"
     },
     {
       title: "Epic Todo App",
       subtitle: "React Hooks",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./project-4.gif",
-      link: "https://pythonbootcamp.com",
+      image: proj4,
+      link: "https://mobifarm-app-frontend.vercel.app/dealers-login",
     },
   ];
 
@@ -55,3 +61,22 @@ export const projects = [
       name: 'HTML/CSS/SCSS/Bootstrap/JQuery',
     },
   ];
+
+  // testmonials
+  export const testimonials = [
+    {
+      id: 1,
+      quote: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sit ipsa delectus eum quo voluptas aspernatur accusantium distinctio possimus est distincto so no.',
+      image: img1,
+      name: 'Rafi Adela',
+      company: 'Google'
+
+    },
+    {
+      id: 2,
+      quote: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sit ipsa delectus eum quo voluptas aspernatur accusantium distinctio possimus est distincto so no.',
+      image: img2,
+      name: 'Guzman Henry',
+      company: 'Amazon'
+    }
+  ]
