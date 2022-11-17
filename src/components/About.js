@@ -1,22 +1,23 @@
 import React from 'react';
-import image from '../images/background-barner.png'
+import { CodeIcon } from '@heroicons/react/solid';
+// import Typed from 'react-typed';
 const About = () => {
     return (
         <section id="about">
             <div className='about-container'>
                     <div className='my-content'>
                         <h1>
-                            Taining to build aethestic,
-                            <br className="hidden lg:inline-block" />
-                            Apps
+                            Elizabeth Mwania
                         </h1>
+                        <br/>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-                            laborum quasi, incidunt dolore 
+                            Loves solving real world problems by creating applications
                             <br/>
-                            iste nostrum cupiditate voluptas?
-                            Laborum, voluptas natus?
+                            that are easy to use and user-centric
+                            <br/>
+                            Let's build! 
                         </p>
+                        <CodeIcon />
                     </div>    
                 
                 </div>

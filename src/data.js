@@ -79,19 +79,5 @@ export const projects = [
       name: 'Guzman Henry',
       company: 'Amazon'
     },
-    // {
-    //   id:3,
-    //   quote: 'Lorem is a dummy text usually veeery LOng',
-    //   image: img1,
-    //   name: 'Anonimous',
-    //   company: 'Oracle Technologies',
-    // },
-    // {
-    //   id: 4,
-    //   quote: 'Text',
-    //   image: img2,
-    //   name: 'Georgia',
-    //   company: 'Ananonimous',
-    // }
 
   ]
