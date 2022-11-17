@@ -1,6 +1,4 @@
 import React from 'react';
-import { CodeIcon } from '@heroicons/react/solid';
-// import Typed from 'react-typed';
 const About = () => {
     return (
         <section id="about">
@@ -17,7 +15,7 @@ const About = () => {
                             <br/>
                             Let's build! 
                         </p>
-                        <CodeIcon />
+                        😇😊
                     </div>    
                 
                 </div>

@@ -1,4 +1,14 @@
 .App{
+    font-family: Arial, Helvetica, sans-serif;
+    p{
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+    .passport{
+        border-radius: 20px;
+        width: 30px;
+        height: 30px;
+    }
     .about-container{
         display: flex;
         justify-content: center;
@@ -7,7 +17,6 @@
         background-size: cover;
         height: 80vh;
         width: 100%;
-        margin-top: 0px;
         background-repeat:no-repeat;
 
         .my-content{
@@ -23,7 +32,6 @@
             color: #fff;
             border-radius: 20px;
             h1{
-                font-family: Arial, Helvetica, sans-serif;
                 font-size: 40px; 
                 letter-spacing: 5px;
             }

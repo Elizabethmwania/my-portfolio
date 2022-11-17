@@ -6,7 +6,7 @@ const Testmonials = () => {
         <section id="testimonials" className="text-gray-400 bg-gray-900 body-font">
             <div className="container px-5 py-10 mx-auto text-center">
                 <UsersIcon className="w-10 inline-block mb-4" />
-                <h1 className="sm:text-4xl text-3xl font-medium title-font text-white mb-12">
+                <h1 className="sm:text-4xl text-3xl font-medium title-font mb-12 text-orange-600">
                 Client Testimonials
                 </h1>
                 <div className="flex flex-wrap m-4 bg-gray-800">
