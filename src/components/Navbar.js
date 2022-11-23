@@ -1,4 +1,5 @@
 import React from 'react';
+import PhoneIcon from '@heroicons/react/solid';
 import { ArrowRightIcon  } from '@heroicons/react/solid'
 import passport from'../images/Passport-size-photo.jpg';
 const Navbar = () => {
@@ -28,7 +29,10 @@ const Navbar = () => {
                 href="#contact"
                 className="pasport-img">
                 <img className='passport' src= {passport} />
-                {/* <ArrowRightIcon className="w-4 h-4 ml-1" /> */}
+               <p>+254 794 319 208</p> 
+                <span>
+                {/* <PhoneIcon className="w-4 h-4 ml-1" /> 254794319208 */}
+                </span>
                 </a>
             </div>
         </header>
