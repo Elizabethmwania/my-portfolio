@@ -1,42 +1,44 @@
 import proj1 from './images/project1.png';
 import proj2 from './images/project2.png';
-import proj3 from './images/project3.png';
-import proj4 from './images/project4.png';
+import proj3 from './images/limuru.png';
+import proj4 from './images/tesla.png';
 import img1 from './images/testimonial1.png';
 import img2 from './images/testimonial2.png';
 export const projects = [
     {
-      title: "Her Hustle",
-      subtitle: "MERN Stack",
+      title: "Tesla Cars",
+      subtitle: "React toolkit, Redux",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: proj1,
-      link: "https://herhustle.co.ke/",
+        "This application shows a variety of Tesla models, where a buy can sign up to purchase their desired model",
+      image: proj4,
+      link: "https://tesla-ecommerce-reactjs-main.vercel.app/",
     },
+    
     {
       title: "Mobifarm Farmers",
       subtitle: "React and Python",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        "Mobifarm is a platform where farmers are trained various skills to enable them harvest quality products from their farms and also meet clients from the platform",
       image: proj2,
       link: "https://mobifarm-app-frontend.vercel.app/",
     },
     {
-      title: "Mobifarm Admin",
-      subtitle: "React and Firebase",
+      title: "Limuru",
+      subtitle: "React, Redux",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        "A platform for joining all well wishers to support in donating and sharing to the marginalized.",
       image: proj3,
-      link: "https://mobifarm-app-frontend.vercel.app/offtaker-dashboard"
+      link: "https://limuru-cheshire-webapp-frontend.vercel.app/"
     },
     {
-      title: "Mobifarm Farmers",
-      subtitle: "React Hooks",
+      title: "Her Hustle",
+      subtitle: "MERN Stack",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: proj4,
-      link: "https://mobifarm-app-frontend.vercel.app/dealers-login",
+        "Her Hustle is a social enterprise born out of the need to create a community for young women in business looking to grow and scale their business.",
+      image: proj1,
+      link: "https://herhustle.co.ke/",
     },
+    
   ];
 
   // skills data
@@ -48,12 +50,12 @@ export const projects = [
     },
     {
       id: 2,
-      name: 'jQuery',
+      name: 'Typescript',
       
     },
     {
       id: 3,
-      name: 'React',
+      name: 'React,Redux,React tookit',
       
     },
     {
