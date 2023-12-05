@@ -1,8 +1,10 @@
-import { info } from 'sass';
-
 const nodemailer = require('nodemailer');
 
 export default async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://liz-mwania.vercel.app/');
+    res.setHeader('Access-Control-Allow-Methods', 'POST');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
   if (req.method === 'POST') {
     // return res.status(405).end();
   const { name, email, message } = req.body;

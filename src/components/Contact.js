@@ -20,10 +20,9 @@ const Contact = () => {
           .then((response) => {
             if (!response.ok) {
               throw new Error(`HTTP error! Status: ${response.status}`);
-              console.log("Not okay");
             }
             return response.json();
-            
+            console.log("Not okay");
           })
           .then((data) => {
             console.log('Server response:', data);
