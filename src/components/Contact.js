@@ -1,70 +1,37 @@
-import React, { useState } from 'react';
-import { ChatIcon } from '@heroicons/react/solid';
+import React, { useRef, useEffect,useState } from 'react';
+import { ChatIcon, ChevronRightIcon } from '@heroicons/react/solid';
+import emailjs from "@emailjs/browser";
 const Contact = () => {
 
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
+    const emailRef = useRef(null);
+    const nameRef = useRef(null);
+    const messageRef = useRef(null);
+    const [loading, setLoading] = useState(false);
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        console.log('Form submitted:', { name, email, message });
-      
-        fetch('/api/submitForm', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, email, message }),
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-            console.log("Not okay");
-          })
-          .then((data) => {
-            console.log('Server response:', data);
-            alert('Message Sent!');
-          })
-          .catch((error) => {
-            console.error('Form submission error:', error);
-            alert('Form submission failed. Please check the console for details.');
-          });
-      }
-      
+    useEffect(() => emailjs.init("bLsdmByFWQl-tvzN4"), []);
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     try {
-    //         const response = await fetch('/api/submitForm', {
-    //             method: 'POST',
-    //             headers: {
-    //               'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify({ name, email, message }),
-              
-    //     })
-    //     if (response.ok){
-    //         alert("Message sent Successfully");
-    //         setName(""); 
-    //         setEmail("");
-    //         setMessage("");
-    //     }else {
-    //         console.error('Form submission failed');
-    //         alert ("Failed to send message.")
-    //     }
-        
-    // } catch (error){
-    //     console.error('Error: ', error);
-    //     alert("An error occurred whie sending message.")
-    //     setName(""); 
-    //     setEmail("");
-    //     setMessage("");
-    // }
-    // }
+    const handleSubmit = async (e) => {
+    e.preventDefault();
+    const serviceId = "service_f5mmzb9";
+    const templateId = "template_dufse0e";
+    try {
 
+        setLoading(true);
+        await emailjs.send(serviceId, templateId, {
+        name: nameRef.current.value,
+        email: emailRef.current.value,
+        message: messageRef.current.value 
+      });
+      alert("Message successfully sent.");
+        emailRef.current.value = '';
+        nameRef.current.value = '';
+        messageRef.current.value ='';
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
     return (
         <section id="contact" className="relative text-gray-400 bg-gray-900 body-font">
             <div className="container px-5 py-10 mx-auto text-center">
@@ -125,11 +92,9 @@ const Contact = () => {
                     </label>
                     <input
                     required
+                    ref={nameRef}
                     type="text"
-                    id="name"
-                    name="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    name='name'
                     className="w-full bg-gray-600 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                 </div>
@@ -139,11 +104,8 @@ const Contact = () => {
                     </label>
                     <input
                     required
+                    ref={emailRef}
                     type="email"
-                    id="email"
-                    name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
                     className="w-full bg-gray-600 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                 </div>
@@ -155,20 +117,23 @@ const Contact = () => {
                     </label>
                     <textarea
                     required
-                    id="message"
-                    name="message"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    ref={messageRef}
                     className="w-full bg-gray-600 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                     />
                 </div>
                 <button
+                    disabled={loading}
                     type="submit"
                     className="text-white bg-orange-600 border-0 py-2 px-6 focus:outline-none hover:bg-orange-500 rounded text-lg">
-                    Submit
+                    {loading ? (
+                    <div className="loader"></div>
+                     ) : ( 'Submit' )}
                 </button>
                 </form>
             </div>
+            <footer className="copyright">
+                &copy; 2023 Elizabeth Mwania. All rights reserved.
+            </footer>
         </section>
     );
 };
