@@ -8,64 +8,33 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-      
         try {
-          const response = await fetch('https://portfolio-three-sigma-56.vercel.app/api/submitForm', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, email, message }),
-          });
-      
-          try {
-            const responseData = await response.json();
-            if (response.ok) {
-              alert('Message sent successfully!');
-            } else {
-              alert(responseData.error || 'Failed to send message.');
-            }
-          } catch (error) {
-            console.error('Error parsing JSON:', error);
-            console.log('Response text:', await response.text());
-            alert('An error occurred while processing the response.');
-          }
-        } catch (error) {
-          console.error('Error sending form data:', error);
-          alert('An error occurred while sending the message.');
-        }
-      };
-      
-
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     try {
-    //         const response = await fetch('/api/submitForm', {
-    //             method: 'POST',
-    //             headers: {
-    //               'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify({ name, email, message }),
+            const response = await fetch('/api/submitForm', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, message }),
               
-    //     })
-    //     if (response.ok){
-    //         alert("Message sent Successfully");
-    //         setName(""); 
-    //         setEmail("");
-    //         setMessage("");
-    //     }else {
-    //         const data = await response.json();
-    //         alert (data.error || "Failed to send message.")
-    //     }
+        })
+        if (response.ok){
+            alert("Message sent Successfully");
+            setName(""); 
+            setEmail("");
+            setMessage("");
+        }else {
+            const data = await response.json();
+            alert (data.error || "Failed to send message.")
+        }
         
-    // } catch (error){
-    //     console.error('Error: ', error);
-    //     alert("An error occurred whie sending message.")
-    //     setName(""); 
-    //     setEmail("");
-    //     setMessage("");
-    // }
-    // }
+    } catch (error){
+        console.error('Error: ', error);
+        alert("An error occurred whie sending message.")
+        setName(""); 
+        setEmail("");
+        setMessage("");
+    }
+    }
 
     return (
         <section id="contact" className="relative text-gray-400 bg-gray-900 body-font">
@@ -114,7 +83,7 @@ const Contact = () => {
                     </div>
                 </div>
                 </div>
-                <form action='https://portfolio-three-sigma-56.vercel.app/api/submitForm' method='post' onSubmit={handleSubmit}
+                <form onSubmit={handleSubmit}
                 style={{padding:20}}
                 className="bg-gray-800 lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
                 <p className="leading-relaxed mb-5">
