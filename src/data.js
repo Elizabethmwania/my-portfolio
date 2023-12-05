@@ -2,9 +2,26 @@ import proj1 from './images/project1.png';
 import proj2 from './images/project2.png';
 import proj3 from './images/limuru.png';
 import proj4 from './images/tesla.png';
+import proj5 from './images/nlfp.jpeg';
 import img1 from './images/testimonial1.png';
 import img2 from './images/testimonial2.png';
 export const projects = [
+  {
+    title: "Lawyers Networking Platform",
+    subtitle: "Django REST, ReactJS",
+    description:
+      "A platform that connects advocates with other service providers in the legal system aiming to achieve optimum practice.",
+    image: proj5,
+    link: "https://lawyers-networking-platform-frontend.vercel.app/",
+  },
+  {
+    title: "Limuru Cheshire",
+    subtitle: "React, Redux",
+    description:
+      "A platform for joining all well wishers to support in donating and sharing to the marginalized.",
+    image: proj3,
+    link: "https://limuru-cheshire-webapp-frontend.vercel.app/"
+  },
     {
       title: "Tesla Cars",
       subtitle: "React toolkit, Redux",
@@ -18,26 +35,20 @@ export const projects = [
       title: "Mobifarm Farmers",
       subtitle: "React and Python",
       description:
-        "Mobifarm is a platform where farmers are trained various skills to enable them harvest quality products from their farms and also meet clients from the platform",
+        "A platform where farmers are trained various skills to enable them harvest quality products and meet clients globally",
       image: proj2,
       link: "https://mobifarm-app-frontend.vercel.app/",
     },
-    {
-      title: "Limuru",
-      subtitle: "React, Redux",
-      description:
-        "A platform for joining all well wishers to support in donating and sharing to the marginalized.",
-      image: proj3,
-      link: "https://limuru-cheshire-webapp-frontend.vercel.app/"
-    },
+    
     {
       title: "Her Hustle",
-      subtitle: "MERN Stack",
+      subtitle: "WordPress, CMS",
       description:
         "Her Hustle is a social enterprise born out of the need to create a community for young women in business looking to grow and scale their business.",
       image: proj1,
       link: "https://herhustle.co.ke/",
     },
+    
     
   ];
 
@@ -45,22 +56,30 @@ export const projects = [
   export const skills = [
     {
       id: 1,
-      name: 'JavaScript',
+      name: 'Java,Spring,SpringBoot',
       
     },
     {
       id: 2,
-      name: 'Typescript',
+      name: 'JavaScript,HTML5',
       
     },
     {
       id: 3,
-      name: 'React,Redux,React tookit',
+      name: 'Python,Django REST',
       
     },
     {
-      id: 3,
-      name: 'HTML/CSS/SCSS/Bootstrap',
+      id: 4,
+      name: 'ReactJS,Typescript,Redux',
+    },
+    {
+      id: 5,
+      name: 'MySQL, Oracle, Postgresql',
+    },
+    {
+      id: 6,
+      name: 'Tailwind,CSS,Sass,Bootstrap',
     },
   ];
 

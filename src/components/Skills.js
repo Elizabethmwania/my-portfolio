@@ -12,7 +12,7 @@ const Skills = () => {
                     Skills &amp; Technologies
                 </h1>
                 <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-                    I'm well equiped with current frontend languages and technologies for web development.
+                    I'm well equiped with various languages and technologies for web development.
                     Known with best creativity in designing and building responsive web applications with highly integrated user experience.
                 </p>
                 </div>
