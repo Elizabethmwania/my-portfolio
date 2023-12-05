@@ -35,6 +35,9 @@ const Contact = () => {
     } catch (error){
         console.error('Error: ', error);
         alert("An error occurred whie sending message.")
+        setName(""); 
+        setEmail("");
+        setMessage("");
     }
     }
 
@@ -85,7 +88,7 @@ const Contact = () => {
                     </div>
                 </div>
                 </div>
-                <form onSubmit={handleSubmit}
+                <form method='post' onSubmit={handleSubmit}
                 name="contact"
                 style={{padding:20}}
                 className="bg-gray-800 lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
