@@ -10,8 +10,8 @@ export default async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'mwania.m.elizabeth@gmail.com',
-        pass: 'Elizabeth@257',
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
     },
   });
 
@@ -33,6 +33,7 @@ export default async (req, res) => {
     }
   });
   }else {
+    console.log('Received a non-POST request:', req.method);
     res.status(405).json({error: 'Method Not allowed'});
   }
 

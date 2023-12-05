@@ -6,34 +6,65 @@ const Contact = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
-    const handleSubmit = async (e) => {
+    function handleSubmit(e) {
         e.preventDefault();
-        try {
-            const response = await fetch('/api/submitForm', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name, email, message }),
-              
+        console.log('Form submitted:', { name, email, message });
+      
+        fetch('/api/submitForm', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, message }),
         })
-        if (response.ok){
-            alert("Message sent Successfully");
-            setName(""); 
-            setEmail("");
-            setMessage("");
-        }else {
-            console.error('Form submission failed');
-        }
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+              console.log("Not okay");
+            }
+            return response.json();
+            
+          })
+          .then((data) => {
+            console.log('Server response:', data);
+            alert('Message Sent!');
+          })
+          .catch((error) => {
+            console.error('Form submission error:', error);
+            alert('Form submission failed. Please check the console for details.');
+          });
+      }
+      
+
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     try {
+    //         const response = await fetch('/api/submitForm', {
+    //             method: 'POST',
+    //             headers: {
+    //               'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify({ name, email, message }),
+              
+    //     })
+    //     if (response.ok){
+    //         alert("Message sent Successfully");
+    //         setName(""); 
+    //         setEmail("");
+    //         setMessage("");
+    //     }else {
+    //         console.error('Form submission failed');
+    //         alert ("Failed to send message.")
+    //     }
         
-    } catch (error){
-        console.error('Error: ', error);
-        alert("An error occurred whie sending message.")
-        setName(""); 
-        setEmail("");
-        setMessage("");
-    }
-    }
+    // } catch (error){
+    //     console.error('Error: ', error);
+    //     alert("An error occurred whie sending message.")
+    //     setName(""); 
+    //     setEmail("");
+    //     setMessage("");
+    // }
+    // }
 
     return (
         <section id="contact" className="relative text-gray-400 bg-gray-900 body-font">
