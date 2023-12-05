@@ -79,7 +79,7 @@ const Contact = () => {
                 </div>
                 </div>
                 <form onSubmit={handleSubmit}
-                data-netlify="true" data-netlify-honeypot="bot-field"
+                data-netlify-honeypot="bot-field"
                 name="contact"
                 style={{padding:20}}
                 className="bg-gray-800 lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
