@@ -23,8 +23,7 @@ const Contact = () => {
             setEmail("");
             setMessage("");
         }else {
-            const data = await response.json();
-            alert (data.error || "Failed to send message.")
+            console.error('Form submission failed');
         }
         
     } catch (error){
