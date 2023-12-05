@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 
 export default async (req, res) => {
   if (req.method !== 'POST') {
-    return res.status(405).end(); // Method Not Allowed
+    return res.status(405).end();
   }
 
   const { name, email, message } = req.body;
@@ -14,14 +14,18 @@ export default async (req, res) => {
 
   // Create a transporter using an SMTP transport
   const transporter = nodemailer.createTransport({
-    // your email configuration, like service, auth, etc.
+    service: 'gmail',
+    auth: {
+        user: 'mwania.m.elizabeth@gmail.com',
+        pass: 'Elizabeth@257',
+    },
   });
 
   // Send email
   await transporter.sendMail({
-    from: 'elizabethmwania257@gmail.com',
+    from: email,
     to: 'mwania.m.elizabeth@gmail.com',
-    subject: 'New Form Submission',
+    subject: 'Sevice Inquiry by: '+ name,
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   });
 
