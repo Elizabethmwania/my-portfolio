@@ -87,7 +87,7 @@ const Contact = () => {
                 </p>
                 <div className="relative mb-4">
                 <input type="hidden" name="form-name" value="contact" />
-                    <label htmlFor="name" className="leading-7 text-sm text-orange-600">
+                    <label htmlFor="name" className="leading-7 text-sm text-gray">
                     Name
                     </label>
                     <input
@@ -99,7 +99,7 @@ const Contact = () => {
                     />
                 </div>
                 <div className="relative mb-4">
-                    <label htmlFor="email" className="leading-7 text-sm text-orange-600">
+                    <label htmlFor="email" className="leading-7 text-sm text-gray">
                     Email
                     </label>
                     <input
@@ -112,7 +112,7 @@ const Contact = () => {
                 <div className="relative mb-4">
                     <label
                     htmlFor="message"
-                    className="leading-7 text-sm text-orange-600">
+                    className="leading-7 text-sm text-gray">
                     Message
                     </label>
                     <textarea
