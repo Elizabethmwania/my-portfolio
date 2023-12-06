@@ -6,14 +6,10 @@ function Scroll() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show the button when scrolled down, hide when at the top
-      setShowButton(window.scrollY > 100); // Adjust the threshold as needed
+      setShowButton(window.scrollY > 100);
     };
-
-    // Attach the event listener to the scroll event
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -27,20 +23,19 @@ function Scroll() {
     <div>
       {showButton && (
         <button
-          onClick={scrollToTop}
-          style={{
-            position: 'fixed',
-            bottom: '20px',
-            right: '40px',
-            color: '#EA580C',
-            width: '50px',
-            height: '50px',
-            backgroundColor: '#ffffff',
-            border: '1px solid #EA580C',
-            borderRadius: '50%',
-            cursor: 'pointer',
-          }}
-          aria-label="Scroll to top"
+        onClick={scrollToTop}
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '40px',
+          width: '50px',
+          height: '50px',
+          borderRadius: '50%',
+          cursor: 'pointer',
+          color: 'gray', 
+          background: 'transparent',
+        }}
+        aria-label="Scroll to top"
         >
           <ArrowCircleUpIcon />
         </button>
