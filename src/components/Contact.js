@@ -132,7 +132,7 @@ const Contact = () => {
                 </form>
             </div>
             <footer className="copyright">
-                &copy; 2023 Elizabeth Mwania. All rights reserved.
+                &copy; 2024 Elizabeth Mwania. All rights reserved.
             </footer>
         </section>
     );
