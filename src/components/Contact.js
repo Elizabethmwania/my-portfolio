@@ -132,7 +132,9 @@ const Contact = () => {
                 </form>
             </div>
             <footer className="copyright">
-                &copy; 2024 Elizabeth Mwania. All rights reserved.
+                    © {new Date().getFullYear()} Elizabeth Mwania. All Rights
+              Reserved.
+                //&copy; 2024 Elizabeth Mwania. All rights reserved.
             </footer>
         </section>
     );
