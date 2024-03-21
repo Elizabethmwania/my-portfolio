@@ -12,7 +12,7 @@ const Projects = () => {
                 </h1>
                 <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
                     I design and develop web applications with aesthetic designs to enable best user experience.
-                    These are some of the current projects that I have built.
+                    These are some of the current projects that I have developed.
                 </p>
                 </div>
                 <div className="flex flex-wrap -m-4">
