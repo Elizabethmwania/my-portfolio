@@ -16,6 +16,7 @@ function App() {
       <Skills />
       <Contact />
       <Scroll />
+      <Chatbot />
     </div>
   );
 }
