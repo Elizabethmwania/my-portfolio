@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import Chatbot from './components/Chatbot';
 import './styles/app.scss';
 import Scroll from './components/Scroll';
 function App() {
